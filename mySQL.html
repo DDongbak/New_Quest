@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+	<link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css'>
+	<title>Library</title>
+	<script type="text/javascript" src="library.js"></script>
+	<link  type="text/css" rel="stylesheet" href="library.css" />
+</head>
+<body>
+	<h1 class="DM">DM's library</h1>
+	<div class="booksearch">
+		<h2 class="function1">Search : books &amp; lender</h2>
+
+		<select name="menu" class="menu">
+			<option value="title">title</option>
+			<option value="author">author</option>
+			<option value="publisher">publisher</option>
+			<option value="lender">lender</option>
+		</select>
+		<input type="text" class="content" />
+		<button type="button" class="search" >Search</button>
+	</div>
+
+
+	<div class="add">
+		<h2 class="function2">Update : </h2>
+		<div class="bookupdate">
+			title : <input type="text" name="title" class="title" />
+			<br>
+			lender : <input type="text" name="lender" class="lender" />
+			<br>
+			loan_date : <input type="date" name="loan_date" class="loan_date" />
+			<br>
+			<button type="button" class="update">Update</button>
+		</div>
+	</div>
+
+	<script>
+		var library = new Library(document.querySelector('.search'), document.querySelector('.update'));
+	</script>
+</body>
+
+</html>
