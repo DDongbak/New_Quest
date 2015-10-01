@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+	<title>SVG scetchboard</title>  
+    <script type="text/javascript" src="sketchboard.js" ></script>
+
+</head>
+<body>
+    <div class="title">
+        <h1>DM's SketchBoard</h1>
+    </div>
+    <div class="buttons">
+        <h3>Which figure do you want to draw?</h3>
+
+        <table>
+            square
+            <tr>
+                <td>x : </td><td><input type="text" class="x_square"/></td>
+                <td>y : </td><td><input type="text" class="y_square"/></td>
+            </tr>
+        </table>
+        <button type="button" class="square">Square</button><br/><br/>
+
+        <table>
+            triangle ( 100, 200 이런 형식으로 데이터를 넣어야한다)
+            <tr>
+                <td>A : </td><td><input type="text" class="A_triangle"/></td>
+                <td>B : </td><td><input type="text" class="B_triangle"/></td>
+                <td>C : </td><td><input type="text" class="C_triangle"/></td>
+            </tr>  
+        </table>
+        <button type="button" class="triangle">Triangle</button><br/><br/>
+
+        <table>
+            circle
+            <tr>
+                <td>r : </td><td><input type="text" class="r_circle"/></td>
+            </tr>
+        </table> 
+        <button type="button" class="circle">Circle</button>
+
+    </div>
+
+    <script>
+        var figure = new Figure(document.querySelector(".square"),document.querySelector(".triangle"),document.querySelector(".circle"));
+        console.log('get into javascript');
+    </script>
+</body>
+</html>
+
